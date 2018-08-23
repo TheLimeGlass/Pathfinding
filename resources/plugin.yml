@@ -1,6 +1,0 @@
-name: Pathfinding
-author: LimeGlass
-description: A Skript addon for pathfinding.
-version: 1.0.0
-main: me.limeglass.pathfinding.Pathfinding
-depend: [Skript, ProtocolLib]

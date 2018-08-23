@@ -1,0 +1,6 @@
+name: Beamer
+author: [Efnilite, LimeGlass]
+description: A Skript addon for guardian beams.
+version: 1.0.1
+main: me.limeglass.beamer.Beamer
+depend: [Skript, ProtocolLib]
