@@ -6,8 +6,6 @@ import org.bukkit.entity.LivingEntity;
 public interface IPathfinding {
 
 	//Pathfinding Goal - Avoid
-	//(avoid|run away from) %*entitydatas%[, radius %-number%[, speed %-number%[, speed (if|when) (close|near) %-number%]]]
-	
 	/**
 	 * Add a pathfinding goal to avoid another entity.
 	 * @param priority The priority of the goal, max is 9.

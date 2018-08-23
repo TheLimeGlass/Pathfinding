@@ -16,6 +16,7 @@ import me.limeglass.pathfinding.utils.annotations.RegisterType;
 //TODO Check/Handle single
 public class ExprPathfindingGoals extends PathfindingExpression<PathfindingGoal> {
 	
+	//(avoid|run away from) %*entitydatas%[, radius %-number%[, speed %-number%[, speed (if|when) (close|near) %-number%]]]
 	@Override
 	protected PathfindingGoal[] get(Event event) {
 		return null;
