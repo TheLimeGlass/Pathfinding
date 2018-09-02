@@ -5,11 +5,6 @@ import org.bukkit.entity.LivingEntity;
 public interface PathfindingGoal {
 
 	/**
-	 * @return The entity involved in the goal.
-	 */
-	public LivingEntity getEntity();
-
-	/**
 	 * @return The priority of the goal on the entity.
 	 */
 	public int getPriority();
@@ -22,6 +17,6 @@ public interface PathfindingGoal {
 	/**
 	 * Adds the goal to the entity.
 	 */
-	public void execute();
+	public void execute(LivingEntity entity);
 
 }

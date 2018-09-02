@@ -7,34 +7,29 @@ import me.limeglass.pathfinding.Pathfinding;
 
 public class AvoidGoal implements PathfindingGoal {
 
-	private final LivingEntity entity;
-	private double speed, close;
+	private double speed = 1.0D;
+	private double close = 1.2D;
+	private float radius = 6.0F;
 	private EntityType[] types;
 	private int priority = 4;
-	private float radius;
 	
-	AvoidGoal(LivingEntity entity, EntityType... types) {
-		this(entity, 6.0F, types);
+	public AvoidGoal(EntityType... types) {
+		this(6.0F, types);
 	}
 	
-	AvoidGoal(LivingEntity entity, float radius, EntityType... types) {
-		this(entity, radius, 1.0D, types);
+	public AvoidGoal(float radius, EntityType... types) {
+		this(radius, 1.0D, types);
 	}
 	
-	AvoidGoal(LivingEntity entity, float radius, double speed, EntityType... types) {
-		this(entity, radius, speed, 1.2D, types);
+	public AvoidGoal(float radius, double speed, EntityType... types) {
+		this(radius, speed, 1.2D, types);
 	}
 	
-	AvoidGoal(LivingEntity entity, float radius, double speed, double close, EntityType... types) {
+	public AvoidGoal(float radius, double speed, double close, EntityType... types) {
 		this.radius = radius;
-		this.entity = entity;
 		this.speed = speed;
 		this.types = types;
 		this.close = close;
-	}
-
-	public LivingEntity getEntity() {
-		return entity;
 	}
 
 	public EntityType[] getAvoidTypes() {
@@ -82,7 +77,7 @@ public class AvoidGoal implements PathfindingGoal {
 		this.close = close;
 	}
 	
-	public void execute() {
+	public void execute(LivingEntity entity) {
 		Pathfinding.getPathfindingAPI().addAvoidPathgoal(priority, entity, radius, speed, close, types);
 	}
 
